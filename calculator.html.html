@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>Nova Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <main class="page">
+    <section class="calculator" aria-label="Calculator">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">SMART TOOL</p>
+          <h1>Calculator</h1>
+        </div>
+        <span class="status-dot" title="Ready"></span>
+      </header>
+
+      <section class="screen" aria-label="Calculator screen">
+        <label for="display">ENTER EXPRESSION</label>
+        <input
+          id="display"
+          class="expression"
+          type="text"
+          inputmode="decimal"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="0"
+          aria-label="Type a calculation"
+        >
+        <div class="result-row">
+          <span>RESULT</span>
+          <output id="result" aria-live="polite">0</output>
+        </div>
+        <p id="message" class="message" aria-live="polite">Type or tap to calculate</p>
+      </section>
+
+      <div class="keypad" aria-label="Calculator buttons">
+        <button class="key utility" data-action="clear">AC</button>
+        <button class="key utility" data-action="delete" aria-label="Delete last character">⌫</button>
+        <button class="key utility" data-value="%">%</button>
+        <button class="key operator" data-value="÷">÷</button>
+
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key operator" data-value="×">×</button>
+
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key operator" data-value="−">−</button>
+
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key operator" data-value="+">+</button>
+
+        <button class="key utility" data-value="(">(</button>
+        <button class="key" data-value="0">0</button>
+        <button class="key" data-value=".">.</button>
+        <button class="key utility" data-value=")">)</button>
+
+        <button class="key equals" data-action="equals">=</button>
+      </div>
+
+      <footer class="footer">
+        <span>Keyboard supported</span>
+        <span>AC clear · Enter calculate · Esc reset</span>
+      </footer>
+    </section>
+  </main>
+  <script src="calculator.js"></script>
+</body>
+</html>
